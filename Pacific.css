@@ -15,17 +15,20 @@ header{
     color: #ffffff;
    
 }
-nav ul{
-    float: left;
-    width: 160px;
-     font-weight: bold;
+nav{
+   font-weight: bold;  
     padding-top: 5px;
     padding-right: 5px;
     padding-left: 20px;
-    padding-bottom: 5px; 
-    list-style: none;
-    margin-left: 0px;
-    
+    padding-bottom: 5px;   
+    float: left;
+    width: 160px;
+
+}
+nav ul{
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 nav a:link
@@ -39,7 +42,11 @@ nav a:visited
 }
 nav a:hover
 {
- color: #ffffff;   
+    color: #ffffff;
+    -webkit-transition: color 2s ease-out;
+    -moz-transition: color 2s ease-out;
+    -o-transition: color 2s ease-out;
+    transition: color 2s ease-out;
 }
 h1
 {
@@ -73,6 +80,10 @@ h3{
     
     
 }
+#content img, #content embed, #content video {
+      float: left;
+      padding-right: 20px;
+  }
 #content ul
 {
  list-style-image: url(images/marker.gif);
@@ -163,6 +174,36 @@ h3{
      text-align: center;
     
 }
+form label{
+  float: left;
+  display:inline-block;
+  text-align: right;
+  width: 120px;
+  padding-right: 20px;
+}
+form input{
+ display: block;
+ margin-bottom: 20px;
+}
+table{
+ border: 1px solid #3399CC;
+ width: 80%;
+ border-spacing: 0;
+}
+
+td, th {
+ padding: 5px;
+ border: 1px solid #3399CC;
+ text-align: center;
+
+}
+.text{
+ text-align: left;   
+}
+.altrow{
+ background-color: #d8e0e3;
+    
+}
 footer
 {
     background-color: #ffffff;
@@ -171,7 +212,7 @@ footer
  font-style: italic;
  padding-top: 20px;
  padding-right: 20px;
- padding-left: 20px;
+ padding-left: 0;
  padding-bottom: 20px;  
  clear: left;
     
@@ -189,21 +230,22 @@ footer
     body{ margin: 0;
     }    
     nav {
-        padding: 0px;
+        padding: 0;
+        float: none;
+        width: auto;    
          
     }
     nav ul{
         clear: left;
-        float: none;
-        display: inline;
- 
-        
         padding-left: 10px;
+        margin-left: 0;
+        margin-right: 0;
         margin-top: 0.5em;
-        margin-bottom: 0.5em;}
+        margin-bottom: 0.5em;
+    }
+  
     nav li{
         display: inline;
-     width: auto;
         padding-top: 0px;
         padding-bottom: 0px;
         padding-left: 0.75em;
@@ -272,6 +314,13 @@ nav li{
 
 nav a:link {
  display: block;   
+}
+form label{
+ float: none;
+ text-align: left;
+    
+    
+ 
 }
 
 }

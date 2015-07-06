@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--[if lt IE 9]>
+<script             src="http://html5shim.googlecode.com/svn/trunk/html5.js"> </script>
+<![endif]-->
+    <title>Pacific Trails</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Pacific Trails Resort requires that you make a reservation to reserve a stay.">
+    <link rel="stylesheet" href="Pacific.css" type="text/css">
+    <link href="css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.custom.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script>
+        Modernizr.load({
+            test: Modernizr.inputtypes.date,
+            nope: "js/jquery-ui.custom.js",
+            callback: function() {
+                $("input[type=date]").datepicker();
+            }
+        });
+
+    </script>
+</head>
+
+<body>
+    <form method="post" action="http://webdevbasics.net/scripts/pacific.php">
+        <div id="wrapper">
+            <header>
+                <h1>Pacific Trails Resort</h1></header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="yurts.html">Yurts</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="reservations.html">Reservations</a></li>
+                </ul>
+            </nav>
+
+            <div id="content">
+                <h2>Reservations at Pacific Trails</h2>
+                <h3>Contact Us Today</h3>
+                <label>* First Name: </label>
+                <input type="text" name="myFName" id="myFname">
+                <br>
+                <label>* Last Name: </label>
+                <input type="text" name="myLName" id="myLname">
+                <br>
+                <label>* Email: </label>
+                <input type="text" name="myEmail" id="myEmail">
+                <br>
+                <label> Phone: </label>
+                <input type="text" name="myPhone" id="myPhone">
+                <br>
+                <label for="myArrival">Arrival Date: </label>
+                <input type="date" name="myArrival" id="myArrival">
+                <br>
+                <label for=myNights> Nights: </label>
+                <input type="number" name="myNights" id="myNights" min="1" max="14">
+                <br>
+                <label for="myComments">* Comments</label>
+                <textarea name="myComments" id="myComments" rows="4" cols="40" required="required" placeholder="Your comments here"></textarea>
+                <br>
+                <input type="submit" value="Submit">
+                <div id="contact"><span class="resort">Pacific Trails Resort</span>
+                    <br> 12010 Pacific Trails Road
+                    <br> Zephyr, CA 95555
+                    <br>
+                    <br>
+                    <span class="desktop">888-555-5555</span>
+                    <span class="mobile"><a href="tel:888-555-5555">888-555-5555</a></span>
+                </div>
+                <footer>Copyright &copy; 2014 Pacific Trails Resort
+                    <br>
+                    <a href="mailto:cliff@mauer.com">cliff@mauer.com</a>
+                </footer>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
